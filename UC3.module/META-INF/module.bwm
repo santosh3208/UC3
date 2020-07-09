@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_wjqxwLqoEeqMW51SVOJEog" targetNamespace="http://tns.tibco.com/bw/composite/UC3.module" name="UC3.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_TdsH0LqtEeqMW51SVOJEog" name="insurance" promote="ComponentProcess/insurance">
+    <sca:interface.wsdl xmi:id="_Td1RwLqtEeqMW51SVOJEog" interface="http://xmlns.example.com/20200630133737PLT#wsdl.interface(insurance)" scaext:wsdlLocation="../Processes/uc3/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_Td_p0LqtEeqMW51SVOJEog" name="RestService" path="/insurance" docBasePath="http://localhost:7777/UC3.module" docResourcePath="Resource" basePath="/" connector="uc3.module.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/uc3.module.Process-Resource.json">
+      <operation xmi:id="_TeEiULqtEeqMW51SVOJEog" operationName="post" nickname="post-insurance" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_TfCLoLqtEeqMW51SVOJEog"/>
+      <advancedConfig xmi:id="_TeCtILqtEeqMW51SVOJEog" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_TeEiUbqtEeqMW51SVOJEog" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_x5_rgLqoEeqMW51SVOJEog" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_x6L4wLqoEeqMW51SVOJEog" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_x6PjILqoEeqMW51SVOJEog" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_x6T0kLqoEeqMW51SVOJEog" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_x6W34LqoEeqMW51SVOJEog" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_x6aiQLqoEeqMW51SVOJEog" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_x6ezsLqoEeqMW51SVOJEog" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_w8orYLqoEeqMW51SVOJEog" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_w8p5gLqoEeqMW51SVOJEog" processName="uc3.module.Process"/>
+    <sca:service xmi:id="_TdmoQLqtEeqMW51SVOJEog" name="insurance">
+      <sca:interface.wsdl xmi:id="_Tdn2YLqtEeqMW51SVOJEog" interface="http://xmlns.example.com/20200630133737PLT#wsdl.interface(insurance)" scaext:wsdlLocation="../Processes/uc3/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

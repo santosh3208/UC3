@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/UC3.module/Service Descriptors/uc3.module.Process-Resource.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1593506344504"
+}]}

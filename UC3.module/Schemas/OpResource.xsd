@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1593506657991" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1593506657991">
+  <complexType name="OpElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="faultInfo">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="code" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="target" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="details">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="code" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="target" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="innerError">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="additionalProp1" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="additionalProp2" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="additionalProp3" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="entityOut">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="oldValue" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="newValue" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="OpElement" type="tns:OpElementType"/>
+</schema>

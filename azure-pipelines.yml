@@ -12,7 +12,12 @@ steps:
   inputs:
     dockerVersion: '17.09.0-ce'
 
-
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      docker version
 
 - task: Maven@3
   inputs:

@@ -1,5 +1,14 @@
 # Maven
 - task: Maven@3
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'UC3.parent/pom.xml'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
   inputs:
     mavenPomFile: 'UC3.parent/pom.xml'
     goals: 'clean package'

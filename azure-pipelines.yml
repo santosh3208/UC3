@@ -37,8 +37,10 @@ steps:
       
       docker images
 
+
 - task: Docker@2
   inputs:
-    containerRegistry: 'Repo'
-    repository: 'santosh1208/sample:mbcp'
-    command: 'push'
+        containerRegistry: 'Repo'
+        repository: 'santosh1208/sample'
+        command: 'push'
+        tags: 'mbcp'

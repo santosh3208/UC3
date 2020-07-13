@@ -36,3 +36,9 @@ steps:
       echo Write your commands here
       
       docker images
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Repo'
+    repository: 'santosh1208/sample:mbcp'
+    command: 'push'
